@@ -1,0 +1,72 @@
+export const SAMPLE_GRAPH_DATA = [
+  {
+    id: "cloud",
+    label: "Cloud",
+    type: "cloud",
+    alerts: 198,
+    misconfigs: 12,
+    children: ["aws1", "gcp", "saas"],
+  },
+  {
+    id: "aws1",
+    label: "AWS",
+    type: "aws",
+    alerts: 89,
+    misconfigs: 5,
+    children: ["s3", "lambda1"],
+  },
+  {
+    id: "gcp",
+    label: "GCP",
+    type: "gcp",
+    alerts: 67,
+    misconfigs: 0,
+    children: ["gce"],
+  },
+  {
+    id: "saas",
+    label: "SaaS",
+    type: "saas",
+    alerts: 0,
+    misconfigs: 3,
+    children: ["auth"],
+  },
+  {
+    id: "s3",
+    label: "S3",
+    type: "service",
+    alerts: 45,
+    misconfigs: 3,
+  },
+  {
+    id: "lambda1",
+    label: "Lambda",
+    type: "service",
+    alerts: 44,
+    misconfigs: 2,
+  },
+  {
+    id: "gce",
+    label: "GCE",
+    type: "service",
+    alerts: 67,
+    misconfigs: 4,
+  },
+  {
+    id: "auth",
+    label: "Auth",
+    type: "service",
+    alerts: 42,
+    misconfigs: 3,
+  },
+];
+
+export const SAMPLE_EDGES = [
+  { source: "cloud", target: "aws1" },
+  { source: "cloud", target: "gcp" },
+  { source: "cloud", target: "saas" },
+  { source: "aws1", target: "s3" },
+  { source: "aws1", target: "lambda1" },
+  { source: "gcp", target: "gce" },
+  { source: "saas", target: "auth" },
+];
