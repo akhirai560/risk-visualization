@@ -40,7 +40,7 @@ A React-based interactive dashboard for visualizing cloud infrastructure securit
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/akhirai560/risk-visualization.git
    cd risk-visualization
    ```
 
@@ -98,18 +98,6 @@ The application follows a modular React architecture with clear separation of co
 ### 1. Data Structure
 
 The application works with hierarchical node data:
-
-```typescript
-interface NodeData {
-  id: string; // Unique identifier
-  label: string; // Display name
-  type: string; // Node type (aws, gcp, s3, etc.)
-  alerts: number; // Security alert count
-  misconfigs: number; // Misconfiguration count
-  children?: string[]; // Child node IDs
-  collapsed?: boolean; // Collapse state
-}
-```
 
 ### 2. Data Processing Pipeline
 
